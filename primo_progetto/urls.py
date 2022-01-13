@@ -21,4 +21,5 @@ urlpatterns = [
     path('',include("prima_applicazione.urls",namespace="prima_applicazione")),
     path('seconda_app/', include("seconda_app.urls", namespace="seconda_app")),
     path('news/', include("news.urls", namespace="news")),
+    path('prova_pratica1/', include("prova_pratica1.urls", namespace="prova_pratica1")),
 ]
