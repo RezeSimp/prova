@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
-    <ol>
-        <li><a href="{% url 'prima_applicazione:homepage'%}">Home page benvenuto</a></li>
-        <li><a href="{% url 'prima_applicazione:welcome'%}">Welcome</a></li>
-        <li><a href="{% url 'prima_applicazione:lista'%}">Lista</a></li>
-        <li><a href="{% url 'prima_applicazione:chi_siamo'%}">Chi siamo</a></li>
-        <li><a href="{% url 'prima_applicazione:variabili'%}">Variabili</a></li>
-        <li><a href="{% url 'seconda_app:es_for'%">Es for</a></li>
-        <li><a href="{% url 'seconda_app:ef_if'%">Es if</a></li>
-        <li><a href="{% url 'seconda_app:if_else_elif'%">Es else elif</a></li>
-    </ol>
-</body>
-</html>
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Index {%endblock title%}
+
+{%block content%}
+
+{%endblock content%}
