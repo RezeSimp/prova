@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{%block title%}
+    View_d
+{%endblock title%}
+{%block content%}
+    <h4>Voti:</h4>
+    {% for voto in voti %}
+        <p><strong>Studente: </strong>{{ voto.studente }}</p>
+        <p><strong>Materia: </strong>{{ voto.materia }}</p>
+        <p><strong>Voto: </strong>{{ voto.voto }}</p>
+        <hr>
+    {% endfor %}
+{%endblock content%}
+
+    

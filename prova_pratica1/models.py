@@ -5,13 +5,18 @@ class Materia(models.Model):
     materia=models.CharField(max_length=20)
 
     def __str__(self):
-        return self.nome + " " + self.materia
+        return self.materia
 
-class Voti(models.Model):
+class Studente(models.Model):
     nome=models.CharField(max_length=20)
+    def __str__(self):
+        return self.nome + " "
+    
+class Voti(models.Model):
     voto=models.CharField(max_length=2)
     assenza=models.CharField(max_length=3)
     materia=models.ForeignKey(Materia, on_delete=models.CASCADE, related_name="materie")
+    studente=models.ForeignKey(Studente, on_delete=models.CASCADE, related_name="studente")
 
     def __str__(self):
-        return self.nome + " " + self.materia + " " + self.voto + " " + self.assenza
+        return self.studente + " " + self.materia + " " + self.voto + " " + self.assenza

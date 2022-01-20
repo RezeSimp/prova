@@ -1,5 +1,9 @@
+from http.client import HTTPResponse
 from multiprocessing import context
+from urllib import response
 from django.shortcuts import render
+
+from primo_progetto.prova_pratica1.models import Studente,Materia,Voti
 
 # Create your views here.
 def view_b(request):
@@ -18,3 +22,10 @@ def view_c(request):
         'NicolaSpina':[("Matematica",7.5,2),("Italiano",6,2),("Inglese",4,3),("Storia",8.5,2),("Geografia",8,2)]
     }
     return render(request,"view_c.html",context)
+def view_d(request):
+    materie= Materia.objects.all()
+    studenti=Studente.objects.all()
+    voti=Voti.objects.all()
+    context= {"studenti": studenti, "materie": materie, "voti": voti}
+    print(context)
+    return render(request, "view_d.html", context)
