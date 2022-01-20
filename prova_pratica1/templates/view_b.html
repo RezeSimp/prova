@@ -1,11 +1,23 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view_b</title>
+</head>
+<body>
+    {% extends 'base.html' %}
 
-{% block title %}
-    View_b
-{% endblock title %}
-
-{% block content %}
-    {% for x in materie %}
-        <li>{{ x }}</li>
-    {% endfor %}
-{% endblock content %}
+    {% block content %}
+    <h2 style="margin-left:-50px">Materie:</h2>
+        <ul>
+            <li>{{materia1}}</li>
+            <li>{{materia2}}</li>
+            <li>{{materia3}}</li>
+            <li>{{materia4}}</li>
+            <li>{{materia5}}</li>
+        </ul>
+    {% endblock %}
+</body>
+</html>
