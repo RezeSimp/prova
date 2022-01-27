@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ voti.studente }}
+{% endblock title %}
+
+{% block content %}
+<p><strong>Studente: </strong>{{ voti.studente }}</p>
+    {% for voto in voti %}
+        <p><strong>Materia: </strong>{{ voto.materia }}</p>
+        <p><strong>Voto: </strong>{{ voto.voto }}</p>
+        <p><strong>Assenze: </strong>{{ voto.assenza }}</p>       
+    {% endfor %}
+
+{% endblock content %}

@@ -10,7 +10,7 @@ class Materia(models.Model):
 class Studente(models.Model):
     nome=models.CharField(max_length=20)
     def __str__(self):
-        return self.nome + " "
+        return self.nome
     
 class Voti(models.Model):
     voto=models.CharField(max_length=2)

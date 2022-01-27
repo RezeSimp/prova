@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    view_c
+{% endblock title %}
+
+{% block content %}
+    <h4>Studenti</h4>
+    {% for studente in studenti %}
+        <p><a href="/prova_pratica1/voti/{{ studente.id }}">{{ studente.nome }}</a></p>
+        <hr>
+    {% endfor %}
+{% endblock content %}
