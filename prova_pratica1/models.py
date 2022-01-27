@@ -17,6 +17,5 @@ class Voti(models.Model):
     assenza=models.CharField(max_length=3)
     materia=models.ForeignKey(Materia, on_delete=models.CASCADE, related_name="materie")
     studente=models.ForeignKey(Studente, on_delete=models.CASCADE, related_name="studente")
-
     def __str__(self):
-        return self.studente + " " + self.materia + " " + self.voto + " " + self.assenza
+        return self.studente.nome + " " + self.materia.materia + " " + self.voto + " " + self.assenza

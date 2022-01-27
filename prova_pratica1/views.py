@@ -45,4 +45,9 @@ class view_eView(ListView):
 
 class VotoDetailView(DetailView):
     model=Voti
-    template="voti_detail.html"
+    template_name="voti_detail.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["voti"] = Voti.objects.all()
+        return context

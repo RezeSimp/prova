@@ -5,11 +5,15 @@
 {% endblock title %}
 
 {% block content %}
-<p><strong>Studente: </strong>{{ voti.studente }}</p>
+
     {% for voto in voti %}
-        <p><strong>Materia: </strong>{{ voto.materia }}</p>
-        <p><strong>Voto: </strong>{{ voto.voto }}</p>
-        <p><strong>Assenze: </strong>{{ voto.assenza }}</p>       
-    {% endfor %}
+   
+    {% ifequal forloop.counter 1 %}
+        <h1>{{ voto.studente }}</h1>
+
+    {% endifequal %}
+        <p><strong>{{ voto.materia }}: </strong>voto: {{ voto.voto }}, ore assenza: {{ voto.assenza }} </p>      
+        
+        {% endfor %}
 
 {% endblock content %}
