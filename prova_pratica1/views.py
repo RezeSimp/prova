@@ -11,7 +11,7 @@ from django.views.generic.list import ListView
 
 def view_API(request):
     materie= Materia.objects.all()
-    data= {"materie": list(materie.values("materia","nome"))}
+    data= {"materie": list(materie.values("pk","materia"))}
     response=JsonResponse(data)
     return response
 
