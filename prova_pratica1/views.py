@@ -19,6 +19,9 @@ def view_API(request):
 
 
 # Create your views here.
+def viewT_API(request):
+    return render(request,"viewT_API.html")
+
 def view_b(request):
      materie={
          'materia1':"Matematica",

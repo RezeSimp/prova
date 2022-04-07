@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="margin-left:-50px">Materie:</h2>
+<ul id="lista">
+</ul>
+<script>
+    fetch("{% url 'prova_pratica1:view_API'%}").then(response=>response.json()).then(result=>{
+        let tbody="";
+        for(const chiave in result){
+            let riga=`<tr>`;    
+            riga+=`<td>${result[chiave].materia}</td>`;
+            riga+="</tr>";
+            tbody+=riga;
+        }
+        document.getElementById("lista").innerHTML=tbody;
+
+    })
+</script>
+{% endblock %}
