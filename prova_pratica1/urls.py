@@ -8,6 +8,6 @@ urlpatterns=[
     path("view_d", view_dView.as_view(), name="view_d"),
     path("view_e", view_eView.as_view(), name="view_e"),
     path("voti/<int:pk>", VotoDetailView.as_view(), name="voti_detail" ),
-    path('materie/', view_b, name="view_API")
+    path('materie/', view_API, name="view_API")
 
 ]
